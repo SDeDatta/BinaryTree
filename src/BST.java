@@ -47,7 +47,6 @@ public class BST {
      * @return true if val is in the tree, false otherwise
      */
     public boolean search(int val) {
-        // TODO: Complete the search function
         return searchHelper(root, val);
     }
     public boolean searchHelper(BSTNode node, int value)
@@ -159,11 +158,14 @@ public class BST {
         {
             node = new BSTNode(value);
         }
+        // Checks if the new node should be placed to the right or left of the current node
         if(value < node.getVal())
         {
+            // Places the node to the left of the current one if the left has no node at the moment
             if(node.getLeft() == null) {
                 node.setLeft(new BSTNode(value));
             }
+            // Keeps checking nodes to the left as long as the value is less than the current node
             else
             {
                 insertHelper(node.getLeft(), value);
@@ -171,9 +173,11 @@ public class BST {
         }
         if(value > node.getVal())
         {
+            // Places the node to the right of the current one if the right has no node at the moment
             if(node.getRight() == null) {
                 node.setRight(new BSTNode(value));
             }
+            // Keeps checking nodes to the right as long as the value is less than the current node
             else
             {
                 insertHelper(node.getRight(), value);

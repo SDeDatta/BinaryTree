@@ -1,8 +1,8 @@
 /**
  * The Node for an Integer Binary Tree
  *
- * @author: Nandhini Namasivayam
- * @version: 03/22/22
+ * @author: Surya De Datta
+ * @version: 12/12/24
  */
 
 public class BSTNode {
